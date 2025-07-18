@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -20,7 +21,8 @@ public class NotificationSenderFactory {
     }
 
     public NotificationSender getSender(String type) {
-        return notificationSenderMap.getOrDefault(type.toUpperCase(), null);
+        return Optional.ofNullable(notificationSenderMap.get(type.toUpperCase()))
+                .orElseThrow(() -> new IllegalCallerException("Unknown sender type: " + type));
     }
 
 
