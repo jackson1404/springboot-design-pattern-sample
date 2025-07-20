@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public abstract class TransactionProcessorTemplate {
 
-    public final TransactionResult processTransaction(TransactionEntity transactionEntity){
+    public final TransactionResult processTransaction(TransactionEntity transactionEntity) throws IllegalAccessException {
 
         validateTransaction(transactionEntity);
 
