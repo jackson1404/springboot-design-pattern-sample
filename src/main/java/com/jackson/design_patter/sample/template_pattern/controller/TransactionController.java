@@ -1,6 +1,7 @@
 package com.jackson.design_patter.sample.template_pattern.controller;
 
 import com.jackson.design_patter.sample.template_pattern.model.TransactionEntity;
+import com.jackson.design_patter.sample.template_pattern.model.TransactionResult;
 import com.jackson.design_patter.sample.template_pattern.service.TransactionProcessingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,11 +17,10 @@ public class TransactionController {
 
     private final TransactionProcessingService transactionProcessingService;
 
-//    @PostMapping("/transactions")
-//    public ResponseEntity<?> processTransactions(@RequestBody TransactionEntity transactionEntity){
-//        transactionProcessingService.
-//        return ResponseEntity.ok()
-//    }
+    @PostMapping("/transactions")
+    public ResponseEntity<TransactionResult> processTransactions(@RequestBody TransactionEntity transactionEntity) throws IllegalAccessException {
+        return ResponseEntity.ok(transactionProcessingService.processTransaction(transactionEntity));
+    }
 
 
 }
