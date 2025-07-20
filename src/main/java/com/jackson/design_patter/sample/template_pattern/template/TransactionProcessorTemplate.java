@@ -54,7 +54,4 @@ public abstract class TransactionProcessorTemplate {
 
     }
 
-
-
-
 }
