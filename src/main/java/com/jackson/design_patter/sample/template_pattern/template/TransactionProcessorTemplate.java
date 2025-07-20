@@ -27,7 +27,6 @@ public abstract class TransactionProcessorTemplate {
     }
 
     protected void validateTransaction(TransactionEntity transactionEntity) throws IllegalAccessException {
-
         System.out.println("Validating transaction " + transactionEntity.getId());
         if (transactionEntity.getAmount() <= 0 ){
             throw new IllegalAccessException("Transaction must be positive");
