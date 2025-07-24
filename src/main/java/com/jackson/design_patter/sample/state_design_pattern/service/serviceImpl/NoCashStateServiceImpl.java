@@ -4,13 +4,37 @@
  * Version      : 	
  * History  :	
  * *************************************************************/
-package com.jackson.design_patter.sample.state_design_pattern.service.serviceImpl;/**
+package com.jackson.design_patter.sample.state_design_pattern.service.serviceImpl;
+
+import com.jackson.design_patter.sample.state_design_pattern.service.AtmStateService;
+import org.springframework.stereotype.Service;
+
+/**
  * NoCashStateServiceImpl Class.
  * <p>
  * </p>
- * 
+ *
  * @author
  */
+@Service
+public class NoCashStateServiceImpl implements AtmStateService {
+    @Override
+    public void insertCard() {
 
-public class NoCashStateServiceImpl {
+    }
+
+    @Override
+    public void ejectCard() {
+
+    }
+
+    @Override
+    public void enterPin(int pin) {
+
+    }
+
+    @Override
+    public void withdrawCash(int amount) {
+
+    }
 }
