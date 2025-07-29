@@ -18,6 +18,9 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class NoCashStateServiceImpl implements AtmStateService {
+    
+
+
     @Override
     public void insertCard() {
 

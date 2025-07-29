@@ -6,6 +6,7 @@
  * *************************************************************/
 package com.jackson.design_patter.sample.state_design_pattern.service.serviceImpl;
 
+import com.jackson.design_patter.sample.state_design_pattern.context.AtmContext;
 import com.jackson.design_patter.sample.state_design_pattern.service.AtmStateService;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +19,13 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class NoCardStateServiceImpl implements AtmStateService {
+
+    private AtmContext atm;
+
+    public NoCardStateServiceImpl(AtmContext atm){
+        this.atm = atm;
+    }
+
     @Override
     public void insertCard() {
 

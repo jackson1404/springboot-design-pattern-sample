@@ -25,6 +25,7 @@ public class PinVerifiedStateServiceImpl implements AtmStateService{
 
     @Override
     public void ejectCard() {
+
     }
 
     @Override
